@@ -303,3 +303,81 @@ section {
   height: 36px;
   pointer-events: none;
 }
+
+@media (max-width: 1200px) {
+  header {
+    padding: 20px 5%;
+  }
+
+  .gallery-area {
+    width: 100%;
+    height: auto;
+    padding: 0 20px;
+  }
+
+  .gallery-area h1 {
+    width: 100%;
+    font-size: 40px;
+    height: auto;
+    line-height: 1.2;
+    margin-bottom: 30px;
+  }
+
+  .gallery-grid {
+    width: 100%;
+    height: auto;
+    gap: 20px;
+  }
+  
+  main {
+    gap: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-window {
+    width: 90%;
+    height: auto;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto;
+  }
+
+  .modal-header {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #full-image {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    max-height: 50vh;
+    object-fit: contain;
+  }
+
+  .button-container {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    margin-top: 20px;
+    gap: 20px;
+  }
+  
+  header img {
+    width: 150px;
+  }
+  
+  .gallery-area h1 {
+    font-size: 32px;
+  }
+}
