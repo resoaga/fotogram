@@ -15,8 +15,8 @@
     <main>
       <section class="gallery-area">
         <h1>Your personal photo album</h1>
-        <div id="gallery" class="gallery-grid">
-          <div class="gallery-item">
+        <section id="gallery" class="gallery-grid">
+          <section class="gallery-item">
             <button
               onclick="openImage(0)"
               aria-label="Berge mit See im Alaska vergrößern"
@@ -27,8 +27,8 @@
                 loading="lazy"
               />
             </button>
-          </div>
-          <div class="gallery-item">
+          </section>
+          <section class="gallery-item">
             <button
               onclick="openImage(1)"
               aria-label="Ein stadt im Anime Look vergrößern"
@@ -39,13 +39,13 @@
                 loading="lazy"
               />
             </button>
-          </div>
-          <div class="gallery-item">
+          </section>
+          <section class="gallery-item">
             <button onclick="openImage(2)" aria-label="Wolkenhimmel vergrößern">
               <img src="img/sky.png" alt="Wolkenhimmel" loading="lazy" />
             </button>
-          </div>
-          <div class="gallery-item">
+          </section>
+          <section class="gallery-item">
             <button
               onclick="openImage(3)"
               aria-label="Ein Farbiger Vogel auf ein Ast vergrößern"
@@ -56,8 +56,8 @@
                 loading="lazy"
               />
             </button>
-          </div>
-          <div class="gallery-item">
+          </section>
+          <section class="gallery-item">
             <button
               onclick="openImage(4)"
               aria-label="Aufnahme von ein Hurricane aus dem Weltall vergrößern"
@@ -68,8 +68,8 @@
                 loading="lazy"
               />
             </button>
-          </div>
-          <div class="gallery-item">
+          </section>
+          <section class="gallery-item">
             <button
               onclick="openImage(5)"
               aria-label="Ein See mit Bergen im Hintergrund vergrößern"
@@ -80,8 +80,8 @@
                 loading="lazy"
               />
             </button>
-          </div>
-          <div class="gallery-item">
+          </section>
+          <section class="gallery-item">
             <button
               onclick="openImage(6)"
               aria-label="Wildente im Wasser vergrößern"
@@ -92,8 +92,8 @@
                 alt="Wildente im Wasser"
               />
             </button>
-          </div>
-          <div class="gallery-item">
+          </section>
+          <section class="gallery-item">
             <button
               onclick="openImage(7)"
               aria-label="Morgenddämmerung vergrößern"
@@ -104,8 +104,8 @@
                 loading="lazy"
               />
             </button>
-          </div>
-          <div class="gallery-item">
+          </section>
+          <section class="gallery-item">
             <button
               onclick="openImage(8)"
               aria-label="Kleine Vögel auf ein Stein vergrößern"
@@ -116,8 +116,8 @@
                 loading="lazy"
               />
             </button>
-          </div>
-          <div class="gallery-item">
+          </section>
+          <section class="gallery-item">
             <button
               onclick="openImage(9)"
               aria-label="Wildkatzen baby auf Stein vergrößern"
@@ -128,8 +128,8 @@
                 loading="lazy"
               />
             </button>
-          </div>
-          <div class="gallery-item">
+          </section>
+          <section class="gallery-item">
             <button
               onclick="openImage(10)"
               aria-label="Schne auf Bergspitze vergrößern"
@@ -140,8 +140,8 @@
                 loading="lazy"
               />
             </button>
-          </div>
-          <div class="gallery-item">
+          </section>
+          <section class="gallery-item">
             <button
               onclick="openImage(11)"
               aria-label="Gefrorener Baum im Winter vergrößern"
@@ -152,8 +152,8 @@
                 loading="lazy"
               />
             </button>
-          </div>
-        </div>
+          </section>
+        </section>
       </section>
     </main>
     <footer class="footer">
@@ -169,16 +169,16 @@
       </div>
     </footer>
 
-    <div id="overlay" onclick="closeOverlay(event)">
-      <div class="modal-window" onclick="event.stopPropagation()">
-        <div class="modal-header">
+    <article id="overlay" onclick="closeOverlay(event)">
+      <article class="modal-window" onclick="event.stopPropagation()">
+        <article class="modal-header">
           <h2 id="image-name">Photo</h2>
           <button class="close-btn" onclick="closeOverlay(event)">
             <img src="img/schliessen.png" alt="Close" />
           </button>
-        </div>
+        </article>
         <img id="full-image" src="" alt="Fullscreen Image" />
-        <div class="button-container">
+        <article class="button-container">
           <button class="nav-btn" onclick="changeImage(-1, event)">
             <img src="img/wischen ohne hover.png" alt="Left" />
           </button>
@@ -186,8 +186,8 @@
           <button class="nav-btn" onclick="changeImage(1, event)">
             <img src="img/wischen ohne hover.png" alt="Right" />
           </button>
-        </div>
-      </div>
-    </div>
+        </article>
+      </article>
+    </article>
   </body>
 </html>
