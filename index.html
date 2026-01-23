@@ -17,7 +17,6 @@
         <h1>Your personal photo album</h1>
         <div id="gallery" class="gallery-grid">
           <div class="gallery-item">
-            <!--mit button kann mann ein unsichtbaren button für die tastatur bzw WCAG erstellen-->
             <button
               onclick="openImage(0)"
               aria-label="Berge mit See im Alaska vergrößern"
@@ -170,10 +169,8 @@
       </div>
     </footer>
 
-    <!-- Overlay für Vollbildansicht -->
     <div id="overlay" onclick="closeOverlay(event)">
       <div class="modal-window" onclick="event.stopPropagation()">
-        <!-- Verhindert das Schließen beim Klicken im Fenster -->
         <div class="modal-header">
           <h2 id="image-name">Photo</h2>
           <button class="close-btn" onclick="closeOverlay(event)">

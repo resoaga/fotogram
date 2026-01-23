@@ -1,5 +1,3 @@
-/*Datenstruktur für Bilder mit Quelle und Alternativtext*/
-
 const images = [
   { src: "img/alaska.png", alt: "Berge mit See im Alaska" },
   { src: "img/animelook.png", alt: "Ein stadt im Anime Look" },
@@ -18,16 +16,11 @@ const images = [
   { src: "img/winter.png", alt: "Gefrorener Baum im Winter" },
 ];
 
-/*Variable zur Verfolgung des aktuell angezeigten Bildindex*/
-
 let currentImageIndex = 0;
-
-/*Funktion zum Öffnen des Bild-Overlays*/
 
 function openImage(index) {
   currentImageIndex = index;
 
-  /*Hier wird ganze Funktion, open overlay, get bild info, erkennung bild, -rheienfolge ausgelöst*/
   const overlay = document.getElementById("overlay");
   const fullImage = document.getElementById("full-image");
   const imageName = document.getElementById("image-name");
@@ -57,7 +50,6 @@ function closeOverlay(event) {
 function changeImage(direction, event) {
   event.stopPropagation();
 
-  // Erhöht oder verringert den Index.
   currentImageIndex += direction;
 
   if (currentImageIndex >= images.length) currentImageIndex = 0;
@@ -73,8 +65,6 @@ function changeImage(direction, event) {
   imageName.textContent = images[currentImageIndex].alt;
   imageCounter.textContent = currentImageIndex + 1 + "/12";
 }
-
-/*Event Listener für Tastatursteuerung*/
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "ArrowRight") {
