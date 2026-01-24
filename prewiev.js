@@ -1,69 +1,63 @@
+const dialogRef = document.getElementById("myDialog");
+const dialogImage = document.getElementById("preview-image");
+const imagesDescription = document.getElementById("desciription");
+const dialogCounter = document.getElementById("preview-counter");
+
 const images = [
-  { src: "img/alaska.png", alt: "Berge mit See im Alaska" },
-  { src: "img/animelook.png", alt: "Ein stadt im Anime Look" },
-  { src: "img/sky.png", alt: "Wolkenhimmel" }, //
-  { src: "img/vogel.png", alt: "Ein Farbiger Vogel auf ein Ast" }, //
-  {
-    src: "img/hurricane.png",
-    alt: "Aufnahme von Hurricane aus dem Weltall",
-  },
-  { src: "img/sea.png", alt: "Ein See mit Bergen im Hintergrund" },
-  { src: "img/wildente.png", alt: "Wildente im Wasser" },
-  { src: "img/nightlook.png", alt: "Morgenddämmerung" },
-  { src: "img/vögell.png", alt: "Kleine Vögel auf ein Stein" },
-  { src: "img/wildkatzen.png", alt: "Wildkatzen baby auf Stein" },
-  { src: "img/mountain.png", alt: "Schne auf Bergspitze" },
-  { src: "img/winter.png", alt: "Gefrorener Baum im Winter" },
+  { src: "img/alaska.png" },
+  { src: "img/animelook.png" },
+  { src: "img/sky.png" },
+  { src: "img/vogel.png" },
+  { src: "img/hurricane.png" },
+  { src: "img/sea.png" },
+  { src: "img/wildente.png" },
+  { src: "img/nightlook.png" },
+  { src: "img/voegell.png" },
+  { src: "img/wildkatzen.png" },
+  { src: "img/mountain.png" },
+  { src: "img/winter.png" },
 ];
 
-let currentImageIndex = 0;
+const description = [
+  "Berge mit See im Alaska",
+  "Ein stadt im Anime Look",
+  "Wolkenhimmel",
+  "Ein Farbiger Vogel auf ein Ast",
+  "Aufnahme von ein Hurricane aus dem Weltall",
+  "Ein See mit Bergen im Hintergrund",
+  "Wildente im Wasser",
+  "Morgenddämmerung",
+  "Kleine Vögel auf ein Stein",
+  "Wildkatzen baby auf Stein",
+  "Schne auf Bergspitze",
+  "Gefrorener Baum im Winter",
+];
 
-function openImage(index) {
-  currentImageIndex = index;
+function openDialog(index) {
+  dialogImage.src = images[index].src;
+  imagesDescription.textContent = description[index];
+  dialogCounter.textContent = `${index + 1}/12`;
 
-  const overlay = document.getElementById("overlay");
-  const fullImage = document.getElementById("full-image");
-  const imageName = document.getElementById("image-name");
-  const imageCounter = document.getElementById("image-counter");
-
-  fullImage.src = images[currentImageIndex].src;
-
-  fullImage.alt = images[currentImageIndex].alt;
-
-  imageName.textContent = images[currentImageIndex].alt;
-
-  imageCounter.textContent = currentImageIndex + 1 + "/12";
-
-  overlay.classList.add("active");
+  dialogRef.showModal();
 }
 
-function closeOverlay(event) {
-  if (
-    event.target.id === "overlay" ||
-    event.target.classList.contains("close-btn") ||
-    event.target.closest(".close-btn")
-  ) {
-    document.getElementById("overlay").classList.remove("active");
-  }
+function closeDialog() {
+  dialogRef.close();
 }
 
-function changeImage(direction, event) {
-  event.stopPropagation();
+function changeImage(direction) {
+  let currentIndex = images.findIndex((img) =>
+    dialogImage.src.includes(img.src),
+  );
 
-  currentImageIndex += direction;
+  currentIndex += direction;
 
-  if (currentImageIndex >= images.length) currentImageIndex = 0;
+  if (currentIndex >= images.length) currentIndex = 0;
+  if (currentIndex < 0) currentIndex = images.length - 1;
 
-  if (currentImageIndex < 0) currentImageIndex = images.length - 1;
-
-  const fullImage = document.getElementById("full-image");
-  const imageName = document.getElementById("image-name");
-  const imageCounter = document.getElementById("image-counter");
-
-  fullImage.src = images[currentImageIndex].src;
-  fullImage.alt = images[currentImageIndex].alt;
-  imageName.textContent = images[currentImageIndex].alt;
-  imageCounter.textContent = currentImageIndex + 1 + "/12";
+  dialogImage.src = images[currentIndex].src;
+  imagesDescription.textContent = description[currentIndex];
+  dialogCounter.textContent = `${currentIndex + 1}/12`;
 }
 
 document.addEventListener("keydown", (event) => {

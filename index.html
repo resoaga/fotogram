@@ -6,155 +6,166 @@
     <title>Fotogram</title>
     <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="prewiev.js"></script>
+    <script src="prewiev.js" defer></script>
   </head>
   <body>
     <header>
-      <img src="img/fotogram_logo.png" alt="Fotogram Logo" />
+      <a href="index.html">
+        <img src="img/fotogram_logo.png" alt="Fotogram Logo"
+      /></a>
     </header>
     <main>
       <section class="gallery-area">
         <h1>Your personal photo album</h1>
         <section id="gallery" class="gallery-grid">
-          <section class="gallery-item">
-            <button
-              onclick="openImage(0)"
-              aria-label="Berge mit See im Alaska vergrößern"
-            >
-              <img
-                src="img/alaska.png"
-                alt="Berge mit See im Alaska"
-                loading="lazy"
-              />
-            </button>
-          </section>
-          <section class="gallery-item">
-            <button
-              onclick="openImage(1)"
-              aria-label="Ein stadt im Anime Look vergrößern"
-            >
-              <img
-                src="img/animelook.png"
-                alt="Ein stadt im Anime Look"
-                loading="lazy"
-              />
-            </button>
-          </section>
-          <section class="gallery-item">
-            <button onclick="openImage(2)" aria-label="Wolkenhimmel vergrößern">
-              <img src="img/sky.png" alt="Wolkenhimmel" loading="lazy" />
-            </button>
-          </section>
-          <section class="gallery-item">
-            <button
-              onclick="openImage(3)"
-              aria-label="Ein Farbiger Vogel auf ein Ast vergrößern"
-            >
-              <img
-                src="img/vogel.png"
-                alt="Ein Farbiger Vogel auf ein Ast"
-                loading="lazy"
-              />
-            </button>
-          </section>
-          <section class="gallery-item">
-            <button
-              onclick="openImage(4)"
-              aria-label="Aufnahme von ein Hurricane aus dem Weltall vergrößern"
-            >
-              <img
-                src="img/hurricane.png"
-                alt="Aufnahme von ein Hurricane aus dem Weltall"
-                loading="lazy"
-              />
-            </button>
-          </section>
-          <section class="gallery-item">
-            <button
-              onclick="openImage(5)"
-              aria-label="Ein See mit Bergen im Hintergrund vergrößern"
-            >
-              <img
-                src="img/sea.png"
-                alt="Ein See mit Bergen im Hintergrund"
-                loading="lazy"
-              />
-            </button>
-          </section>
-          <section class="gallery-item">
-            <button
-              onclick="openImage(6)"
-              aria-label="Wildente im Wasser vergrößern"
-            >
-              <img
-                src="img/wildente.png"
-                loading="lazy"
-                alt="Wildente im Wasser"
-              />
-            </button>
-          </section>
-          <section class="gallery-item">
-            <button
-              onclick="openImage(7)"
-              aria-label="Morgenddämmerung vergrößern"
-            >
-              <img
-                src="img/nightlook.png"
-                alt="Morgenddämmerung"
-                loading="lazy"
-              />
-            </button>
-          </section>
-          <section class="gallery-item">
-            <button
-              onclick="openImage(8)"
-              aria-label="Kleine Vögel auf ein Stein vergrößern"
-            >
-              <img
-                src="img/vögell.png"
-                alt="Kleine Vögel auf ein Stein"
-                loading="lazy"
-              />
-            </button>
-          </section>
-          <section class="gallery-item">
-            <button
-              onclick="openImage(9)"
-              aria-label="Wildkatzen baby auf Stein vergrößern"
-            >
-              <img
-                src="img/wildkatzen.png"
-                alt="Wildkatzen baby auf Stein"
-                loading="lazy"
-              />
-            </button>
-          </section>
-          <section class="gallery-item">
-            <button
-              onclick="openImage(10)"
-              aria-label="Schne auf Bergspitze vergrößern"
-            >
-              <img
-                src="img/mountain.png"
-                alt="Schne auf Bergspitze"
-                loading="lazy"
-              />
-            </button>
-          </section>
-          <section class="gallery-item">
-            <button
-              onclick="openImage(11)"
-              aria-label="Gefrorener Baum im Winter vergrößern"
-            >
-              <img
-                src="img/winter.png"
-                alt="Gefrorener Baum im Winter"
-                loading="lazy"
-              />
-            </button>
-          </section>
+          <button
+            onclick="openDialog(0)"
+            aria-label="Berge mit See im Alaska vergrößern"
+          >
+            <img
+              src="img/alaska.png"
+              alt="Berge mit See im Alaska"
+              loading="lazy"
+            />
+          </button>
+
+          <button
+            onclick="openDialog(1)"
+            aria-label="Ein stadt im Anime Look vergrößern"
+          >
+            <img
+              src="img/animelook.png"
+              alt="Ein stadt im Anime Look"
+              loading="lazy"
+            />
+          </button>
+          <button onclick="openDialog(2)" aria-label="Wolkenhimmel vergrößern">
+            <img src="img/sky.png" alt="Wolkenhimmel" loading="lazy" />
+          </button>
+          <button
+            onclick="openDialog(3)"
+            aria-label="Ein Farbiger Vogel auf ein Ast vergrößern"
+          >
+            <img
+              src="img/vogel.png"
+              alt="Ein Farbiger Vogel auf ein Ast"
+              loading="lazy"
+            />
+          </button>
+          <button
+            onclick="openDialog(4)"
+            aria-label="Aufnahme von ein Hurricane aus dem Weltall vergrößern"
+          >
+            <img
+              src="img/hurricane.png"
+              alt="Aufnahme von ein Hurricane aus dem Weltall"
+              loading="lazy"
+            />
+          </button>
+          <button
+            onclick="openDialog(5)"
+            aria-label="Ein See mit Bergen im Hintergrund vergrößern"
+          >
+            <img
+              src="img/sea.png"
+              alt="Ein See mit Bergen im Hintergrund"
+              loading="lazy"
+            />
+          </button>
+          <button
+            onclick="openDialog(6)"
+            aria-label="Wildente im Wasser vergrößern"
+          >
+            <img
+              src="img/wildente.png"
+              alt="Wildente im Wasser"
+              loading="lazy"
+            />
+          </button>
+          <button
+            onclick="openDialog(7)"
+            aria-label="Morgenddämmerung vergrößern"
+          >
+            <img
+              src="img/nightlook.png"
+              alt="Morgenddämmerung"
+              loading="lazy"
+            />
+          </button>
+          <button
+            onclick="openDialog(8)"
+            aria-label="Kleine Vögel auf ein Stein vergrößern"
+          >
+            <img
+              src="img/voegell.png"
+              alt="Kleine Vögel auf ein Stein"
+              loading="lazy"
+            />
+          </button>
+          <button
+            onclick="openDialog(9)"
+            aria-label="Wildkatzen baby auf Stein vergrößern"
+          >
+            <img
+              src="img/wildkatzen.png"
+              alt="Wildkatzen baby auf Stein"
+              loading="lazy"
+            />
+          </button>
+          <button
+            onclick="openDialog(10)"
+            aria-label="Schne auf Bergspitze vergrößern"
+          >
+            <img
+              src="img/mountain.png"
+              alt="Schne auf Bergspitze"
+              loading="lazy"
+            />
+          </button>
+          <button
+            onclick="openDialog(11)"
+            aria-label="Gefrorener Baum im Winter vergrößern"
+          >
+            <img
+              src="img/winter.png"
+              alt="Gefrorener Baum im Winter"
+              loading="lazy"
+            />
+          </button>
         </section>
       </section>
+      <dialog id="myDialog">
+        <header>
+          <h2 id="desciription" aria-label="Titel"></h2>
+          <button
+            onclick="closeDialog()"
+            class="close-btn"
+            aria-label="Close Preview"
+          >
+            <img src="img/schliessen.png" alt="Close" />
+          </button>
+        </header>
+        <section><img id="preview-image" src="" alt="Preview Image" /></section>
+        <footer>
+          <button
+            id="prev-btn"
+            class="nav-btn"
+            aria-label="Previous Image"
+            onclick="changeImage(-1)"
+          >
+            <img src="img/wischen ohne hover.png" alt="Left" />
+          </button>
+          <span id="preview-counter">1/12</span>
+          <button
+            id="next-btn"
+            class="nav-btn"
+            aria-label="Next Image"
+            onclick="changeImage(1)"
+          >
+            <img src="img/wischen ohne hover.png" alt="Right" />
+          </button>
+        </footer>
+      </dialog>
     </main>
     <footer class="footer">
       <svg class="footer-bg" viewBox="0 0 1440 127" preserveAspectRatio="none">
@@ -168,26 +179,5 @@
         <p>© 2023 Developer Akademie GmbH</p>
       </div>
     </footer>
-
-    <article id="overlay" onclick="closeOverlay(event)">
-      <article class="modal-window" onclick="event.stopPropagation()">
-        <article class="modal-header">
-          <h2 id="image-name">Photo</h2>
-          <button class="close-btn" onclick="closeOverlay(event)">
-            <img src="img/schliessen.png" alt="Close" />
-          </button>
-        </article>
-        <img id="full-image" src="" alt="Fullscreen Image" />
-        <article class="button-container">
-          <button class="nav-btn" onclick="changeImage(-1, event)">
-            <img src="img/wischen ohne hover.png" alt="Left" />
-          </button>
-          <span id="image-counter">1/12</span>
-          <button class="nav-btn" onclick="changeImage(1, event)">
-            <img src="img/wischen ohne hover.png" alt="Right" />
-          </button>
-        </article>
-      </article>
-    </article>
   </body>
 </html>
