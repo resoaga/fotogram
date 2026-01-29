@@ -261,3 +261,63 @@ main {
     font-size: 32px;
   }
 }
+@media (max-width: 638px) {
+  #myDialog {
+    width: 90%;
+  }
+  #preview-image {
+    width: 75%;
+  }
+}
+
+@media (max-width: 551px) {
+  #myDialog {
+    width: 95%;
+  }
+  #preview-image {
+    width: 85%;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 491px) {
+  #myDialog {
+    width: 90%;
+  }
+  #preview-image {
+    position: relative;
+    width: 380px;
+    height: 425px;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+    padding-top: 0;
+  }
+
+  #myDialog footer {
+    gap: 40px;
+    width: 220px;
+    padding-top: 0px;
+  }
+}
+
+@media (max-width: 440px) {
+  #myDialog {
+    width: 80%;
+  }
+  #preview-image {
+    position: relative;
+    width: 300px;
+    height: 425px;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+    padding-top: 20px;
+  }
+
+  #myDialog footer {
+    gap: 40px;
+    width: 220px;
+    padding-top: 20px;
+  }
+}
