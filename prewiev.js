@@ -3,6 +3,7 @@ const dialogImage = document.getElementById("preview-image");
 const imagesDescription = document.getElementById("desciription");
 const dialogCounter = document.getElementById("preview-counter");
 
+
 const images = [
   { src: "img/alaska.png" },
   { src: "img/animelook.png" },
@@ -33,16 +34,28 @@ const description = [
   "Gefrorener Baum im Winter",
 ];
 
+function renderGallery() {
+  const gallery = document.getElementById("gallery");
+  images.forEach((img, index) => {
+    const button = document.createElement("button");
+    button.onclick = () => openDialog(index);
+    button.ariaLabel = description[index];
+    button.innerHTML = `<img src="${img.src}" alt="${description[index]}" loading="lazy" />`;
+    gallery.appendChild(button);
+  });
+}
+
 function openDialog(index) {
   dialogImage.src = images[index].src;
   imagesDescription.textContent = description[index];
   dialogCounter.textContent = `${index + 1}/12`;
-
   dialogRef.showModal();
+  dialogRef.classList.add("opened");
 }
 
 function closeDialog() {
   dialogRef.close();
+  dialogRef.classList.remove("opened");
 }
 
 function changeImage(direction) {
@@ -66,6 +79,15 @@ document.addEventListener("keydown", (event) => {
   } else if (event.key === "ArrowLeft") {
     changeImage(-1, event);
   } else if (event.key === "Escape") {
-    closeOverlay({ target: document.getElementById("overlay") });
+    closeDialog();
+  }
+});
+
+renderGallery();
+
+
+dialogRef.addEventListener("click", (event) => {
+  if (event.target === dialogRef) {
+    closeDialog();
   }
 });

@@ -104,7 +104,7 @@ main {
 
 .footer-content p {
   font-family: "Figtree", sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   color: #627b84;
   margin: 0;
 }
@@ -133,10 +133,19 @@ main {
   background: #09212a;
   border-radius: 40px;
   border: none;
-  outline: none;
   padding: 0;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   margin: auto;
+}
+
+#myDialog::backdrop {
+  opacity: 0;
+  background-color: rgba(92, 91, 91, 0.8);
+}
+
+#myDialog[opened]::backdrop {
+  opacity: 1;
+  background-color: rgba(92, 91, 91, 0.8);
 }
 
 #myDialog header {
@@ -210,6 +219,7 @@ main {
 .nav-btn:first-child {
   rotate: 180deg;
 }
+
 #preview-counter {
   font-family: "Figtree", sans-serif;
   font-weight: 600;
@@ -261,10 +271,12 @@ main {
     font-size: 32px;
   }
 }
+
 @media (max-width: 638px) {
   #myDialog {
     width: 90%;
   }
+
   #preview-image {
     width: 75%;
   }
@@ -274,6 +286,7 @@ main {
   #myDialog {
     width: 95%;
   }
+
   #preview-image {
     width: 85%;
     object-fit: contain;
@@ -284,6 +297,7 @@ main {
   #myDialog {
     width: 90%;
   }
+
   #preview-image {
     position: relative;
     width: 380px;
@@ -303,21 +317,104 @@ main {
 
 @media (max-width: 440px) {
   #myDialog {
-    width: 80%;
+    width: 95%;
+    max-width: 95%;
+    height: auto;
+    max-height: 45vh;
+    padding-bottom: 20px;
+    margin: auto;
   }
+
+  #myDialog header {
+    padding: 10px 15px;
+    height: auto;
+    flex-shrink: 0;
+  }
+
+
+  #myDialog header h2 {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+
+  .close-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .close-btn img {
+    width: 20px;
+    height: 20px;
+  }
+
+
   #preview-image {
     position: relative;
-    width: 300px;
-    height: 425px;
-    object-fit: cover;
+    width: 100%;
+    height: auto;
+    max-height: 50vh;
+    object-fit: contain;
     margin: 0 auto;
     display: block;
-    padding-top: 20px;
+    padding-top: 5px;
+    flex: 1;
+
   }
 
   #myDialog footer {
-    gap: 40px;
-    width: 220px;
-    padding-top: 20px;
+    position: relative;
+    width: 100%;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin-top: 15px;
+    gap: 20px;
+    padding-top: 0;
+    flex-shrink: 0;
+
+  }
+
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-btn img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  #myDialog {
+    width: 90%;
+    max-width: 90%;
+    height: auto;
+    max-height: 42vh;
+    padding-bottom: 20px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 375px) {
+  #myDialog {
+    width: 85%;
+    max-width: 87%;
+    height: auto;
+    max-height: 37vh;
+    padding-bottom: 20px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 335px) {
+  #myDialog {
+    width: 80%;
+    max-width: 80%;
+    height: auto;
+    max-height: 33vh;
+    padding-bottom: 20px;
+    margin: auto;
   }
 }
