@@ -49,6 +49,7 @@ function renderGallery() {
 }
 
 function openDialog(index) {
+  dialogImage.src = "";
   dialogImage.src = images[index].src;
   imagesDescription.textContent = description[index];
   dialogCounter.textContent = `${index + 1}/12`;
