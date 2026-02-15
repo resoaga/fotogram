@@ -1,56 +1,69 @@
 <!doctype html>
 <html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fotogram</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="preview.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fotogram</title>
-  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
-  <link rel="stylesheet" href="styles.css" />
-  <script src="prewiev.js" defer></script>
-</head>
-
-<body>
-  <header>
-    <a href="index.html">
-      <img src="img/fotogram_logo.png" alt="Fotogram Logo" /></a>
-  </header>
-  <main>
-    <section class="gallery-area">
-      <h1>Your personal photo album</h1>
-      <section id="gallery" class="gallery-grid">
+  <body onload="init()">
+    <header>
+      <a href="index.html">
+        <img src="img/fotogram_logo.png" alt="Fotogram Logo"
+      /></a>
+    </header>
+    <main>
+      <section class="gallery-area">
+        <h1>Your personal photo album</h1>
+        <section id="gallery" class="gallery-grid"></section>
       </section>
-    </section>
-    <dialog id="myDialog">
-      <header>
-        <h2 id="desciription" aria-label="Titel"></h2>
-        <button onclick="closeDialog()" class="close-btn" aria-label="Close Preview">
-          <img src="img/schliessen.png" alt="Close" />
-        </button>
-      </header>
-      <section><img id="preview-image" src="" alt="Preview Image" /></section>
-      <footer>
-        <button id="prev-btn" class="nav-btn" aria-label="Previous Image" onclick="changeImage(-1)">
-          <img src="img/wischen ohne hover.png" alt="Left" />
-        </button>
-        <span id="preview-counter">1/12</span>
-        <button id="next-btn" class="nav-btn" aria-label="Next Image" onclick="changeImage(1)">
-          <img src="img/wischen ohne hover.png" alt="Right" />
-        </button>
-      </footer>
-    </dialog>
-  </main>
-  <footer class="footer">
-    <svg class="footer-bg" viewBox="0 0 1440 127" preserveAspectRatio="none">
-      <path
-        d="M0 127H1440V24.9102C1257.5 7.95 981.576 -0.999994 719.5 -0.999994C457.835 -0.999994 210.28 4.9 0 24.7883V127Z"
-        fill="#09212A" />
-    </svg>
-    <div class="footer-content">
-      <img src="img/dev_logo.png" alt="Fotogram Logo" />
-      <p>© 2023 Developer Akademie GmbH</p>
-    </div>
-  </footer>
-</body>
-
+      <dialog id="myDialog">
+        <header>
+          <h2 id="desciription" aria-label="Titel"></h2>
+          <button
+            onclick="closeDialog()"
+            class="close-btn"
+            aria-label="Close Preview"
+          >
+            <img src="img/schliessen.png" alt="Close" />
+          </button>
+        </header>
+        <section><img id="preview-image" src="" alt="Preview Image" /></section>
+        <footer>
+          <button
+            id="prev-btn"
+            class="nav-btn"
+            aria-label="Previous Image"
+            onclick="changeImage(-1)"
+          >
+            <img src="img/wischen ohne hover.png" alt="Left" />
+          </button>
+          <span id="preview-counter">1/12</span>
+          <button
+            id="next-btn"
+            class="nav-btn"
+            aria-label="Next Image"
+            onclick="changeImage(1)"
+          >
+            <img src="img/wischen ohne hover.png" alt="Right" />
+          </button>
+        </footer>
+      </dialog>
+    </main>
+    <footer class="footer">
+      <svg class="footer-bg" viewBox="0 0 1440 127" preserveAspectRatio="none">
+        <path
+          d="M0 127H1440V24.9102C1257.5 7.95 981.576 -0.999994 719.5 -0.999994C457.835 -0.999994 210.28 4.9 0 24.7883V127Z"
+          fill="#09212A"
+        />
+      </svg>
+      <div class="footer-content">
+        <img src="img/dev_logo.png" alt="Fotogram Logo" />
+        <p>© 2023 Developer Akademie GmbH</p>
+      </div>
+    </footer>
+  </body>
 </html>

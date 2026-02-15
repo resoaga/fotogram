@@ -16,11 +16,20 @@ body {
 header {
   display: flex;
   align-items: center;
-  padding: 20px 140px;
+  justify-content: center;
+  padding: 20px;
   height: 81px;
   width: 100%;
   background: #09212a;
   box-sizing: border-box;
+}
+
+header a {
+  display: flex;
+  align-items: center;
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 20px;
 }
 
 header img {
@@ -43,9 +52,10 @@ main {
 .gallery-area {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 80px;
-  width: 1170px;
+  width: 1440px;
+  margin: 0 auto;
 }
 
 .gallery-area h1 {
@@ -56,7 +66,7 @@ main {
   color: #ffffff;
   margin: 0;
   text-align: center;
-  width: 1170px;
+  width: 1440px;
   height: 67px;
 }
 
@@ -66,7 +76,7 @@ main {
   justify-content: center;
   align-items: center;
   gap: 48px 16px;
-  width: 1170px;
+  width: 1440px;
   height: 348px;
 }
 
@@ -331,12 +341,10 @@ main {
     flex-shrink: 0;
   }
 
-
   #myDialog header h2 {
     font-size: 18px;
     line-height: 1.2;
   }
-
 
   .close-btn {
     width: 40px;
@@ -348,7 +356,6 @@ main {
     height: 20px;
   }
 
-
   #preview-image {
     position: relative;
     width: 100%;
@@ -359,7 +366,6 @@ main {
     display: block;
     padding-top: 5px;
     flex: 1;
-
   }
 
   #myDialog footer {
@@ -372,7 +378,6 @@ main {
     gap: 20px;
     padding-top: 0;
     flex-shrink: 0;
-
   }
 
   .nav-btn {

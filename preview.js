@@ -3,7 +3,6 @@ const dialogImage = document.getElementById("preview-image");
 const imagesDescription = document.getElementById("desciription");
 const dialogCounter = document.getElementById("preview-counter");
 
-
 const images = [
   { src: "img/alaska.png" },
   { src: "img/animelook.png" },
@@ -33,6 +32,10 @@ const description = [
   "Schne auf Bergspitze",
   "Gefrorener Baum im Winter",
 ];
+
+function init() {
+  renderGallery();
+}
 
 function renderGallery() {
   const gallery = document.getElementById("gallery");
@@ -82,9 +85,6 @@ document.addEventListener("keydown", (event) => {
     closeDialog();
   }
 });
-
-renderGallery();
-
 
 dialogRef.addEventListener("click", (event) => {
   if (event.target === dialogRef) {
