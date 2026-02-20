@@ -60,6 +60,7 @@ function openDialog(index) {
 function closeDialog() {
   dialogRef.close();
   dialogRef.classList.remove("opened");
+  dialogImage.src = "";
 }
 
 function changeImage(direction) {
